@@ -1,2 +1,2 @@
 # Jarvis
-This is my Jarvis Project, An advanced voice assistent.
+This is my Jarvis Project, An advanced voice assistant.
