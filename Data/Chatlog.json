@@ -1,0 +1,130 @@
+[
+    {
+        "role": "user",
+        "content": "Hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! It's nice to meet you, Sinan Shamsudheen. How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "who are you?"
+    },
+    {
+        "role": "assistant",
+        "content": "I am Jarvis, a highly advanced AI chatbot."
+    },
+    {
+        "role": "user",
+        "content": "who is shashi taroor?"
+    },
+    {
+        "role": "assistant",
+        "content": "Shashi Tharoor is an Indian politician, diplomat, and author. He is currently serving as a Member of Parliament from Thiruvananthapuram, Kerala, and is a member of the Indian National Congress."
+    },
+    {
+        "role": "user",
+        "content": "hey im 20 years old"
+    },
+    {
+        "role": "assistant",
+        "content": "You were born in the year 2005."
+    },
+    {
+        "role": "user",
+        "content": "bye"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye, Sinan! It was nice chatting with you."
+    },
+    {
+        "role": "user",
+        "content": "whats my age?"
+    },
+    {
+        "role": "assistant",
+        "content": "You are 20 years old."
+    },
+    {
+        "role": "user",
+        "content": "time?"
+    },
+    {
+        "role": "assistant",
+        "content": "The time is 19 hours, 29 minutes, and 15 seconds."
+    },
+    {
+        "role": "user",
+        "content": "remember to reply in 12hr formate next time"
+    },
+    {
+        "role": "assistant",
+        "content": "The time is 7:29 PM."
+    },
+    {
+        "role": "user",
+        "content": "time?"
+    },
+    {
+        "role": "assistant",
+        "content": "The time is 7:29 PM."
+    },
+    {
+        "role": "user",
+        "content": "tell me a joke"
+    },
+    {
+        "role": "assistant",
+        "content": "Why did the computer go to the doctor? It had a virus!"
+    },
+    {
+        "role": "user",
+        "content": "why?"
+    },
+    {
+        "role": "assistant",
+        "content": "Because it's a play on words! In computers, a \"virus\" is a type of malware, but in medical terms, a virus is a type of illness. The joke is funny because it takes the common computer problem and gives it a unexpected twist by applying it to a doctor's visit."
+    },
+    {
+        "role": "user",
+        "content": "exit"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye, Sinan! It was nice chatting with you."
+    },
+    {
+        "role": "user",
+        "content": "exit"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye!"
+    },
+    {
+        "role": "user",
+        "content": "goodbye"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye!"
+    },
+    {
+        "role": "user",
+        "content": "exito"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye!"
+    },
+    {
+        "role": "user",
+        "content": "byeee"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye!"
+    }
+]
