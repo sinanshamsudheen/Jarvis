@@ -126,5 +126,85 @@
     {
         "role": "assistant",
         "content": "Goodbye!"
+    },
+    {
+        "role": "user",
+        "content": "who is me"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the correct question is \"who am I?\" and the answer could be \"I am me\" or \"I am [insert name]\"."
+    },
+    {
+        "role": "user",
+        "content": "im sinan"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, it seems that \"Im Si-wan\" is a South Korean actor and singer, also known as Yim Si Wan. He is a member of the South Korean boy band ZE:A and its sub-group ZE:A Five."
+    },
+    {
+        "role": "user",
+        "content": "who is john cena"
+    },
+    {
+        "role": "assistant",
+        "content": "John Felix Anthony Cena is an American actor and professional wrestler. As a wrestler, he has been signed to WWE since 2001 and is a record 16-time world champion as recognized by WWE, alongside Ric Flair."
+    },
+    {
+        "role": "user",
+        "content": "what is stock price of nvidia?"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the current stock price of NVIDIA Corporation (NVDA) is $124.56."
+    },
+    {
+        "role": "user",
+        "content": "what is stock price of nvidia 4 days ago?"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the closing price of NVIDIA Corporation (NVDA) 4 days ago was $118.42."
+    },
+    {
+        "role": "user",
+        "content": "what is the market cap of nvidia?"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, as of January 2025, NVIDIA has a market capitalization of $2.90 trillion."
+    },
+    {
+        "role": "user",
+        "content": "what is the market cap of nvidia last month?"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, as of January 2025, NVIDIA had a market capitalization of \u20b9250.902 trillion, which is approximately $3.602 trillion."
+    },
+    {
+        "role": "user",
+        "content": "python -u \"d:\\VsCode\\Jarvis\\Backend\\RealtimeSearchEngine.py\""
+    },
+    {
+        "role": "assistant",
+        "content": "This appears to be a Python script execution command. The script is located at \"d:\\VsCode\\Jarvis\\Backend\\RealtimeSearchEngine.py\" and is being run with the \"-u\" option, which forces the Python interpreter to not buffer the output, allowing for unbuffered binary data to be sent to the console."
+    },
+    {
+        "role": "user",
+        "content": "exit"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye, Sinan! It was nice chatting with you."
+    },
+    {
+        "role": "user",
+        "content": "exit"
+    },
+    {
+        "role": "assistant",
+        "content": "Goodbye!"
     }
 ]
