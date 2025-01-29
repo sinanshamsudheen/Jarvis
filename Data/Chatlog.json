@@ -206,5 +206,21 @@
     {
         "role": "assistant",
         "content": "Goodbye!"
+    },
+    {
+        "role": "user",
+        "content": "what is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Sinan Shamsudheen."
+    },
+    {
+        "role": "user",
+        "content": "what is the price of s25 ultra?"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the price of the Samsung Galaxy S25 Ultra is \u20b91,49,000.00 for the 12GB RAM and 256GB storage variant, and \u20b91,65,999 for the 12GB RAM and 1TB storage variant."
     }
 ]
