@@ -37,26 +37,53 @@ def Content(Topic):
     def OpenNotepad(File):
         default_text_editor='notepad.exe'
         subprocess.Popen([default_text_editor,File])
-    
     def ContentWriterAI(prompt):
-        messages.append({"role": "user", "content": f"{prompt}"})
+        messages.append({"role": "user", "content": prompt})
         
-        completion = client.chat.completion.create(
-            model = "mixtral-8x7b-32768",
-            messages=SystemChatBot + messages,
-            max_tokens=2048,
-            temperature=0.7,
-            top_p=1,
-            stream=True,
-            stop=None
-        )
-        Answer = ""
-        for chunk in completion:
-            if chunk.choices[0].delta.content:
-                Answer+= chunk.choices[0].delta.content
-        Answer= Answer.replace("</s>","")
-        messages.append({"role": "assitant", "content": Answer})
-        return Answer
+        try:
+            completion = client.chat.completions.create(
+                model="mixtral-8x7b-32768",
+                messages=SystemChatBot + messages,
+                max_tokens=2048,
+                temperature=0.7,
+                top_p=1,
+                stream=True
+            )
+    
+            Answer = ""
+            for chunk in completion:
+                content_piece = chunk.choices[0].delta.content
+                if content_piece:
+                    Answer += content_piece
+    
+            Answer = Answer.replace("</s>", "")
+            messages.append({"role": "assistant", "content": Answer})  # Fixed typo
+    
+            return Answer
+        
+        except Exception as e:
+            print(f"Error in ContentWriterAI: {e}")
+            return "An error occurred while generating content."
+
+    # def ContentWriterAI(prompt):
+    #     messages.append({"role": "user", "content": f"{prompt}"})
+        
+    #     completion = client.chat.completions.create(
+    #         model = "mixtral-8x7b-32768",
+    #         messages=SystemChatBot + messages,
+    #         max_tokens=2048,
+    #         temperature=0.7,
+    #         top_p=1,
+    #         stream=True,
+    #         stop=None
+    #     )
+    #     Answer = ""
+    #     for chunk in completion:
+    #         if chunk.choices[0].delta.content:
+    #             Answer+= chunk.choices[0].delta.content
+    #     Answer= Answer.replace("</s>","")
+    #     messages.append({"role": "assistant", "content": Answer})
+    #     return Answer
     Topic: str=Topic.replace("Content ","")
     ContentByAI=ContentWriterAI(Topic)
 
@@ -86,7 +113,7 @@ def OpenApp(app, sess=requests.session()):
             links=soup.find_all('a', {'jsname': 'UWckNb'})
             return [link.get('href') for link in links]
         def search_google(query):
-            url=f"https://www.google.come/search?q={query}"
+            url=f"https://www.google.com/search?q={query}"
             headers={'User-Agent':useragent}
             response=sess.get(url, headers=headers)
             if response.status_code==200:
@@ -132,7 +159,7 @@ async def TranslateAndExecute(commands: list[str]):
     funcs=[]
 
     for command in commands:
-        if command.startswit("open "):
+        if command.startswith("open "):
             if "open it" in command:
                 pass
             if "open file" == command:
@@ -146,8 +173,8 @@ async def TranslateAndExecute(commands: list[str]):
             pass
         elif command.startswith("close "):
             fun=asyncio.to_thread(CloseApp,command.removeprefix("close "))
-            funcs.apppend(fun)
-        elif command.startswith("Play "):
+            funcs.append(fun)
+        elif command.lower().startswith("play "):
             fun=asyncio.to_thread(PlayYoutube, command.removeprefix("Play "))
             funcs.append(fun)
         elif command.startswith("google search "):
@@ -162,12 +189,11 @@ async def TranslateAndExecute(commands: list[str]):
         else:
             print(f"No function Found. For {command}")
     results = await asyncio.gather(*funcs)
-    for results in results:
+    for result in results:
         if isinstance(result, str):
             yield result
         else:
             yield result
-GoogleSearch("helo world")
 async def Automation(commands: list[str]):
     async for result in TranslateAndExecute(commands):
         pass

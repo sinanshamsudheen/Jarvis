@@ -98,7 +98,4 @@ def RealTimeSearchEngine(prompt):
 
 if __name__ == "__main__":
     while True:
-        prompt = input("Enter your query: ")
         print(RealTimeSearchEngine(prompt))
-        if "bye" in prompt or "exit" in prompt:
-            break

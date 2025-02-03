@@ -86,7 +86,4 @@ def ChatBot(Query):
 
 if __name__ == "__main__":
     while True:
-        user_input=input("Enter your Questions: ")
         print(ChatBot(user_input))
-        if "bye" or "exit" in user_input:
-            break
