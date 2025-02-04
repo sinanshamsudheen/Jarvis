@@ -1,4 +1,5 @@
 import pygame
+from pygame import mixer
 import random
 import asyncio
 import edge_tts

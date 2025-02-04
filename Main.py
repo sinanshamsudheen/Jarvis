@@ -10,7 +10,7 @@ GetMicrophoneStatus,
 GetAssistantStatus)
 from Backend.Model import FirstLayerDMM
 from Backend.RealtimeSearchEngine import RealTimeSearchEngine
-
+# from Backend.ImageGeneration import ImageGeneration
 from Backend.Automation import Automation
 from Backend.SpeechToText import SpeechRecognition
 from Backend.Chatbot import ChatBot
@@ -19,6 +19,7 @@ from dotenv import dotenv_values
 from asyncio import run
 from time import sleep
 import subprocess
+from subprocess import Popen
 import threading
 import json
 import os
@@ -28,7 +29,7 @@ Username = env_vars.get("Username")
 Assistantname= env_vars.get("Assistantname")
 DefaultMessage = f'''{Username} : Hello {Assistantname}, How are you?
 {Assistantname} : Welcome {Username}. I am doing well. How may i help you?'''
-subprocess = []
+subprocesses = []
 Functions = ["open", "close", "play", "system", "content", "google search", "youtube search"]
 
 def ShowDefaultChatIfNoChats():
@@ -37,7 +38,7 @@ def ShowDefaultChatIfNoChats():
         with open(TempDirectoryPath('Database.data'), 'w', encoding='utf-8') as file:
             file.write("")
         
-        with open(TempDirectoryPath('Response.data'), 'w', encoding='utf-8') as file:
+        with open(TempDirectoryPath('Responses.data'), 'w', encoding='utf-8') as file:
             file.write(DefaultMessage)
 
 def ReadChatLogJson():
@@ -111,19 +112,20 @@ def MainExecution():
             if any(queries.startswith(func) for func in Functions):
                 run(Automation(list(Decision)))
                 TaskExecution = True
+    
     if ImageExecution == True:
         with open(r"Frontend\Files\ImageGeneration.data", "w") as file:
-            file.write(f"{ImageGenerationQuery}, True")
+            file.write(f"{ImageGenerationQuery},True")
         
         try:
             p1 = subprocess.Popen(['python', r'Backend\ImageGeneration.py'],
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                                stdin=subprocess.PIPE, shell = False)
+                                stdin=subprocess.PIPE, shell=False)
             subprocesses.append(p1)
         except Exception as e:
             print(f"Error starting ImageGeneration.py: {e}")
     
-    if G and R or R:
+    if G and R:
         SetAssistantStatus("Searching...")
         Answer = RealTimeSearchEngine(QueryModifier(Merged_query))
         ShowTextToScreen(f"{Assistantname} : {Answer}")
@@ -145,12 +147,21 @@ def MainExecution():
             elif "realtime" in Queries:
                 SetAssistantStatus("Searching...")
                 QueryFinal = Queries.replace("realtime ","")
-                Answer = RealtimeSearchEngine(QueryModifier(QueryFinal))
+                Answer = RealTimeSearchEngine(QueryModifier(QueryFinal))
                 ShowTextToScreen(f"{Assistantname} : {Answer}")
                 SetAssistantStatus("Answering...")
                 TextToSpeech(Answer)
                 return True
             
+            elif "content" in Queries:
+                SetAssistantStatus("Writing...")
+                QueryFinal = Queries.replace("content ","")
+                Answer = RealTimeSearchEngine(QueryModifier(QueryFinal))
+                ShowTextToScreen(f"{Assistantname} : {Answer}")
+                SetAssistantStatus("Answering...")
+                Automation(Answer)
+                return True
+
             elif "exit" in Queries:
                 QueryFinal = "Okay, Bye!"
                 Answer = ChatBot(QueryModifier(QueryFinal))
@@ -182,3 +193,4 @@ if __name__ == "__main__":
     thread2 = threading.Thread(target=FirstThread, daemon=True)
     thread2.start()
     SecondThread()
+
