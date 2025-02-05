@@ -30,7 +30,7 @@ Assistantname= env_vars.get("Assistantname")
 DefaultMessage = f'''{Username} : Hello {Assistantname}, How are you?
 {Assistantname} : Welcome {Username}. I am doing well. How may i help you?'''
 subprocesses = []
-Functions = ["open", "close", "play", "system", "content", "google search", "youtube search"]
+Functions = ["open", "close", "play", "system", "content", "google search", "youtube search","organize"]
 
 def ShowDefaultChatIfNoChats():
     File =  open(r'Data\ChatLog.json', "r", encoding='utf-8')

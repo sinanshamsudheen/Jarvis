@@ -85,20 +85,23 @@ def OpenApp(app, sess=requests.session()):
         "linkedin": "https://www.linkedin.com/",
         "whatsapp": "https://web.whatsapp.com/",
         "gmail": "https://mail.google.com/",
-        "git": "https://github.com/sinanshamsudheen"
+        "github": "https://github.com/sinanshamsudheen",
+        "git": "https://github.com/sinanshamsudheen",
+        "repository": "https://github.com/sinanshamsudheen?tab=repositories",
+        "ktu": "https://www.ktunotes.in/ktu-s4-cse-notes-2019-scheme/",
+        "gfg": "https://www.geeksforgeeks.org/batch/gfg-160-problems?tab=Chapters",
+        "amazon": "https://www.amazon.in/",
+        "flipkart": "https://www.flipkart.com/"
     }
 
     try:
-        # Try opening the local application first
         appopen(app, match_closest=True, output=True, throw_error=True)
         return True
     except:
-        # If the app is mapped to a website, open the site instead
         if app.lower() in website_mappings:
             webopen(website_mappings[app.lower()])
             return True
 
-        # Otherwise, try searching for the app on Google
         def extract_links(html):
             if html is None:
                 return []
@@ -121,7 +124,6 @@ def OpenApp(app, sess=requests.session()):
             links = extract_links(html)
             if links:
                 webopen(links[0])
-
         return True
 
 def CloseApp(app):
