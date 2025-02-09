@@ -10,7 +10,6 @@ GetMicrophoneStatus,
 GetAssistantStatus)
 from Backend.Model import FirstLayerDMM
 from Backend.RealtimeSearchEngine import RealTimeSearchEngine
-# from Backend.ImageGeneration import ImageGeneration
 from Backend.Automation import Automation
 from Backend.SpeechToText import SpeechRecognition
 from Backend.Chatbot import ChatBot
@@ -30,7 +29,7 @@ Assistantname= env_vars.get("Assistantname")
 DefaultMessage = f'''{Username} : Hello {Assistantname}, How are you?
 {Assistantname} : Welcome {Username}. I am doing well. How may i help you?'''
 subprocesses = []
-Functions = ["open", "close", "play", "system", "content", "google search", "youtube search","organize"]
+Functions = ["open", "close", "play", "system", "content", "google search", "youtube search","organize","organise"]
 
 def ShowDefaultChatIfNoChats():
     File =  open(r'Data\ChatLog.json', "r", encoding='utf-8')
@@ -106,7 +105,7 @@ def MainExecution():
         if "generate " in queries:
             ImageGenerationQuery = str(queries)
             ImageExecution = True
-    
+            
     for queries in Decision:
         if TaskExecution == False:
             if any(queries.startswith(func) for func in Functions):
@@ -143,7 +142,15 @@ def MainExecution():
                 SetAssistantStatus("Answering...")
                 TextToSpeech(Answer)
                 return True
-            
+
+            elif "organize" in queries or "organise" in queries:
+                    SetAssistantStatus("Organizing...")
+                    p2 = subprocess.Popen(['python', r'Backend\AutoFileSorter.py'],
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                    stdin=subprocess.PIPE, shell=False)
+                    subprocesses.append(p2)
+                    SetAssistantStatus("Answering...")
+                    return True
             elif "realtime" in Queries:
                 SetAssistantStatus("Searching...")
                 QueryFinal = Queries.replace("realtime ","")
