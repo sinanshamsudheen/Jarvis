@@ -2,7 +2,7 @@
 ### **J.A.R.V.I.S - Advanced AI Assistant**  
 🚀 An intelligent AI-powered assistant designed to automate tasks, execute voice commands, and generate AI-driven responses with an intuitive user interface.  
 
-![JARVIS - AI Assistant](assets/banner.jpeg)
+![JARVIS - AI Assistant](assets/banner.jpg)
 ---
 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀,
 •  𝙎𝙥𝙚𝙚𝙘𝙝 & 𝘼𝙪𝙙𝙞𝙤 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜:
