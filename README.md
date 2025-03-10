@@ -28,25 +28,25 @@
 - 🎭 Animated Responses – Engaging visual feedback for user interactions.
 
 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝗶𝗲𝘀 𝗨𝘀𝗲𝗱,
-• 𝙋𝙧𝙤𝙜𝙧𝙖𝙢𝙢𝙞𝙣𝙜 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚: Python
-• 𝘾𝙤𝙧𝙚 𝙇𝙞𝙗𝙧𝙖𝙧𝙞𝙚𝙨: Asyncio, GroqAPI, Speech Recognition, Text-to-Speech
-• 𝙂𝙐𝙄 𝙁𝙧𝙖𝙢𝙚𝙬𝙤𝙧𝙠: Tkinter with animations and event-driven UI
-• 𝘼𝙄 & 𝙈𝙖𝙘𝙝𝙞𝙣𝙚 𝙇𝙚𝙖𝙧𝙣𝙞𝙣𝙜:
-       - GroqAPI models for text generation
-       - Custom models for AI-based vision and image recognition
-       - Natural Language Processing (NLP) techniques for chatbot intelligence
-• 𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙤𝙣 & 𝙎𝙮𝙨𝙩𝙚𝙢 𝘾𝙤𝙣𝙩𝙧𝙤𝙡:
-       - OS and subprocess modules for application and system automation
-       - Threading and multiprocessing for parallel task execution
+• 𝙋𝙧𝙤𝙜𝙧𝙖𝙢𝙢𝙞𝙣𝙜 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚: Python <br>
+• 𝘾𝙤𝙧𝙚 𝙇𝙞𝙗𝙧𝙖𝙧𝙞𝙚𝙨: Asyncio, GroqAPI, Speech Recognition, Text-to-Speech<br>
+• 𝙂𝙐𝙄 𝙁𝙧𝙖𝙢𝙚𝙬𝙤𝙧𝙠: Tkinter with animations and event-driven UI<br>
+• 𝘼𝙄 & 𝙈𝙖𝙘𝙝𝙞𝙣𝙚 𝙇𝙚𝙖𝙧𝙣𝙞𝙣𝙜:<br>
+       - GroqAPI models for text generation<br>
+       - Custom models for AI-based vision and image recognition<br>
+       - Natural Language Processing (NLP) techniques for chatbot intelligence<br>
+• 𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙤𝙣 & 𝙎𝙮𝙨𝙩𝙚𝙢 𝘾𝙤𝙣𝙩𝙧𝙤𝙡:<br>
+       - OS and subprocess modules for application and system automation<br>
+       - Threading and multiprocessing for parallel task execution<br>
 • 𝙒𝙚𝙗 & 𝙎𝙚𝙖𝙧𝙘𝙝 𝙄𝙣𝙩𝙚𝙜𝙧𝙖𝙩𝙞𝙤𝙣:
-       - Google Search API and YouTube API for real-time information  retrieval
-       - Web scraping for extended search capabilities
+       - Google Search API and YouTube API for real-time information  retrieval<br>
+       - Web scraping for extended search capabilities<br>
 
 𝗜𝗺𝗽𝗮𝗰𝘁 & 𝗨𝘀𝗲 𝗖𝗮𝘀𝗲𝘀
-- Enhances productivity by automating routine tasks.
-- Provides real-time AI-driven responses.
-- Supports multi-language interactions for a diverse user base.
-- Acts as a personal assistant for both professional and personal use.
+- Enhances productivity by automating routine tasks.<br>
+- Provides real-time AI-driven responses.<br>
+- Supports multi-language interactions for a diverse user base.<br>
+- Acts as a personal assistant for both professional and personal use.<br>
 
 This project showcases expertise in AI development, automation, and natural language processing, making it a perfect addition to any tech-driven portfolio.
 ---
