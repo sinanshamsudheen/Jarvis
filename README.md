@@ -38,7 +38,7 @@
 • 𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙤𝙣 & 𝙎𝙮𝙨𝙩𝙚𝙢 𝘾𝙤𝙣𝙩𝙧𝙤𝙡:<br>
 &emsp;- OS and subprocess modules for application and system automation<br>
 &emsp;- Threading and multiprocessing for parallel task execution<br>
-• 𝙒𝙚𝙗 & 𝙎𝙚𝙖𝙧𝙘𝙝 𝙄𝙣𝙩𝙚𝙜𝙧𝙖𝙩𝙞𝙤𝙣:
+• 𝙒𝙚𝙗 & 𝙎𝙚𝙖𝙧𝙘𝙝 𝙄𝙣𝙩𝙚𝙜𝙧𝙖𝙩𝙞𝙤𝙣:<br>
 &emsp;- Google Search API and YouTube API for real-time information  retrieval<br>
 &emsp;- Web scraping for extended search capabilities<br>
 
