@@ -4,3 +4,4 @@ Requirements.txt
 Files/
 __pycache__/
 *.pyc
+Main.py
