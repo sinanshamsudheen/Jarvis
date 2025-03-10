@@ -32,15 +32,15 @@
 • 𝘾𝙤𝙧𝙚 𝙇𝙞𝙗𝙧𝙖𝙧𝙞𝙚𝙨: Asyncio, GroqAPI, Speech Recognition, Text-to-Speech<br>
 • 𝙂𝙐𝙄 𝙁𝙧𝙖𝙢𝙚𝙬𝙤𝙧𝙠: Tkinter with animations and event-driven UI<br>
 • 𝘼𝙄 & 𝙈𝙖𝙘𝙝𝙞𝙣𝙚 𝙇𝙚𝙖𝙧𝙣𝙞𝙣𝙜:<br>
-       - GroqAPI models for text generation<br>
-       - Custom models for AI-based vision and image recognition<br>
-       - Natural Language Processing (NLP) techniques for chatbot intelligence<br>
+&emsp;- GroqAPI models for text generation<br>
+&emsp;- Custom models for AI-based vision and image recognition<br>
+&emsp;- Natural Language Processing (NLP) techniques for chatbot intelligence<br>
 • 𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙤𝙣 & 𝙎𝙮𝙨𝙩𝙚𝙢 𝘾𝙤𝙣𝙩𝙧𝙤𝙡:<br>
-       - OS and subprocess modules for application and system automation<br>
-       - Threading and multiprocessing for parallel task execution<br>
+&emsp;- OS and subprocess modules for application and system automation<br>
+&emsp;- Threading and multiprocessing for parallel task execution<br>
 • 𝙒𝙚𝙗 & 𝙎𝙚𝙖𝙧𝙘𝙝 𝙄𝙣𝙩𝙚𝙜𝙧𝙖𝙩𝙞𝙤𝙣:
-       - Google Search API and YouTube API for real-time information  retrieval<br>
-       - Web scraping for extended search capabilities<br>
+&emsp;- Google Search API and YouTube API for real-time information  retrieval<br>
+&emsp;- Web scraping for extended search capabilities<br>
 
 𝗜𝗺𝗽𝗮𝗰𝘁 & 𝗨𝘀𝗲 𝗖𝗮𝘀𝗲𝘀
 - Enhances productivity by automating routine tasks.<br>
